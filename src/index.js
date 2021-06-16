@@ -1,4 +1,20 @@
-function FtoC(tempF) {
+
+
+  let name = prompt("What is your name?");
+alert ("Hi " + name + "! Let's check the weather! 😊 ");
+
+
+
+
+
+
+
+
+
+
+
+
+ function FtoC(tempF) {
     return (5 * (tempF - 32)) / 9;
   }
   function CtoF(tempC) {
