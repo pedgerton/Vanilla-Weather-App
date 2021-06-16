@@ -1,0 +1,80 @@
+body {
+    background: rgb(241, 241, 184);
+    padding: 20px 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .extendedforecast {
+    background: lightgray;
+    text-align: center;
+  
+    line-height: 40px;
+  }
+  
+  .temp {
+    font-size: 30px;
+  }
+  .col-2 {
+    font-size: large;
+  }
+  .main-container {
+    max-width: 900px;
+    background: rgba(76, 91, 228, 0.8);
+    padding: 20px;
+    border: 6px solid #1f1801;
+    border-radius: 4px;
+  }
+  
+  .main-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .current-icon {
+    font-size: 150px;
+  }
+  .current-temp {
+    font-size: 100px;
+    margin-bottom: 24px;
+  }
+  .current-temp-deg {
+    font-size: 50px;
+    line-height: 80px;
+    vertical-align: top;
+  }
+  .max-temp-col {
+    border-right: 1px solid black;
+    text-align: right;
+  }
+  .current-stats {
+    color: #da610b;
+  }
+  .forecast-day {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .forecast-card {
+    margin-top: 10px;
+  }
+  .forecast-card > .card-header {
+    background: rgba(76, 91, 228, 0.8);
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .fas fa-heart {
+    color: white;
+  }
+  .btn-outline-secondary {
+    color: white;
+  }
+  
+  .Featured Cities {
+    color: blue;
+  }
+  .Miami {
+    color: gold;
+  }
+  .Atlanta {
+    color: red;
+  }
+  
