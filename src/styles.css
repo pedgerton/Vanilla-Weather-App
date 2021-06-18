@@ -19,7 +19,7 @@ body {
   }
   .main-container {
     max-width: 900px;
-    background: rgba(76, 91, 228, 0.8);
+    background: rgba(200, 205, 245, 0.8);
     padding: 20px;
     border: 6px solid #1f1801;
     border-radius: 4px;
@@ -78,3 +78,15 @@ body {
     color: red;
   }
   
+  .Weather-App:hover{
+    text-decoration: underline;
+    color: black;
+    text-align: center;
+}
+
+    
+ a: link{
+   color red
+ }
+
+
