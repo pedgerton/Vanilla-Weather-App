@@ -1,223 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Weather App</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
+      
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    />
-
-    <link rel="stylesheet" href="src/styles.css" />
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" />
   </head>
+
   <body>
-          <div class="card forecast-card">
-          <div class="card-header">The Weather Project! 🌤</div>
-               <div class="container">
-              
-              
-              <br />
-            <div class="card-body">
-            <div class="row">
-          </div><div class="weatherproject">
-				   <div class="row">
-            <div class="container main-container">
-            <div class="row control-row">
-              <div class="col-sm-10">
-                <form id="search-form">
-                  <div class="input-group mb-3">
-                    <input
-                      type= "text" 
-                      class="form-control"
-                      placeholder="Search for a city"
-                      aria-label="City, Country"
-                      aria-describedby="button-addon2"
-                      id="search-city-input"
-                    />
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="submit"
-                      id="button-addon2"
-                    >
-                      <i class="fas fa-search-location"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      id="btn-geo-location"
-                    >
-                      <i class="fas fa-location-arrow"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      <i class="fas fa-heart"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div class="col-sm-2 text-end">
-                <div
-                  class="btn-group"
-                  role="group"
-                  aria-label="Basic radio toggle button group"
-                >
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="btnradioCF"
-                    id="btnRadioC"
-                    autocomplete="off"
-                    checked
-                  />
-                  <label class="btn btn-outline-secondary" for="btnRadioC">ºC</label>
-      
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="btnradioCF"
-                    id="btnRadioF"
-                    autocomplete="off"
-                  />
-              <input
-              type="radio"
-              class="btn-check"
-              name="btnradioCF"
-              id="btnRadioF"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-secondary" for="btnRadioF">ºF</label>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row main-row">
-        
-          <div class="col-6 text-center">
-            <p id="selector-date"></p>
-            <p id="city-name"></p>
-            
+
+    <audio
+    autoplay
+    controls
+    id="my_audio"
+    loop="loop"
+    src="src\images\2019-05-03_-_Elevator_Ride_-_www.fesliyanstudios.com.mp3"
+    type="audio/mpeg"
+  ></audio>
+
+
+
+
+
+
+
+
+    <div class="card forecast-card">
+      <div class="card-header">The Weather Project! 🌤</div>
+           <div class="container">
           
-          <h2> Partly Sunny</h2>
-          <h1 class="current-temp">
-            <span id="current-temp-val">18</span>
-            <span id="current-temp-deg" class="current-temp-deg">ºC</span>
-          </h1>
-          <div class="row">
-            <div class="col-6 max-temp-col">Max 60ºF</div>
-            <div class="col-6 text-start">Min 25ºF</div>
-          </div>
-        </div>
-        <div class="col-6 text-center">
-          <i class="<bi bi-cloud-sun current-icon"></i>"
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <div class="row text-center current-stats">
-                <div class="col">Feels like: 40ºF</div>
-                <div class="col">Humidity: 90%</div>
-                <div class="col">Precipitation: 20%</div>
-                <div class="col">Wind: 5 km/h</div>
-              </div>
-            </div>
-          </div>
-				</div>
-				
-				<div class="card forecast-card">
-					<div class="card-header">Extended Forecast</div>
-					<div class="card-body">
-						<div class="row">
-      </div><div class="extendedforecast">
-
-				<div class="row">
-        <div class="col forecast">
-          MONDAY
-          <div class="forecastEmoji">⛈</div>
-          <div class="forecastTemp">76°/ 24°C</div>
-        </div>
-
-        <div class="col forecast">
-          TUESDAY
-          <div class="forecastEmoji">⛈</div>
-          <div class="forecastTemp">76°/ 24°C</div>
-        </div>
-
-        <div class="col forecast">
-          WEDNESDAY
-          <div class="forecastEmoji">⛅️</div>
-          <div class="forecastTemp">80°/26°C</div>
-        </div>
-
-        <div class="col forecast">
-          THURSDAY
-          <div class="forecastEmoji">☀️</div>
-          <div class="forcastTemp">76°/ 24°C</div>
-        </div>
-
-        <div class="col forecast">
-          FRIDAY
-          <div class="forecastEmoji">🌤</div>
-          <div class="forcastTemp">76°/ 24°C</div>
-        </div>
-
-        <div class="col forecast">
-          SATURDAY
-          <div class="forecastEmoji">⛈</div>
-          <div class="forecastTemp">80°/ 26°C</div>
-        </div>
-
-        <div class="col forecast">
-          SUNDAY
-          <div class="forecastEmoji">🌤</div>
-          <div class="forecastTemp">85°/ 29°C</div>
-        </div>
-      </div>
-    </div>
-       </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-   
-  
-    <div>
-      <small>
-        <a href="https://github.com/pedgerton/My-Weather-App"
-        target="blank"> 
+          
+          <br />
+        <div class="card-body">
+        <div class="row">
+      </div><div class="weatherproject">
+       <div class="row">
         
-            Open-source code</a 
-           
-           > 
-           by Pamela Edgerton
-      </small>
-    </div>
-      
 
+    
+      <div class="weather">
+        <h1>
+          
+        </h1>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form id="search-form">
+<div class="row">
+<div class="col-5">
+<input 
+id="city-input"
+type="search" 
+placeholder="Search for a city"
+class="form-control"
+autocomplete="off"
+/>
+</div>
+
+
+ <div class="col-2">
+<input 
+class="btn btn-primary"
+type="submit"
+value="Search"
+/>
+</div>
+</div>
+</form>
+
+<br />
+        <h2>
+          
+        </h2>
+        <div class="container">
+        <div class="row">
+            <div class="col-6">
+        <ul>
+          <li id="date" > </li>
+          <li id="description">Sunny</li>
+        </ul>
+        <img 
+          src=""
+          alt="weather icon"
+          id="icon"
+          />
+          
+
+<div id="current-temp"> <br> <br> </div> <span class= "unitStyle"><a href="#" id="celsius-link" class="active"> ºC</a> | <a href="#" id="fahrenheit-link">ºF </a></span>
+          </div>
+          
+          
+
+
+
+
+
+          
+          <div class="col-6">
+            <ul>
+             
+              <li id="humidity"> Humidity: %
+                </li>
+                
+                <li id="wind"> Wind: mph
+                  </li>
+            </ul>
+        </div>
+      </div>
+           
+   
+    <div class="weather-forecast" id="forecast">
+      <div class="row">
+        
+      </div>
+    </div>
+     </div>
 
      
-      
-    <script
-      src="https://kit.fontawesome.com/f0781ee918.js"
-      crossorigin="anonymous"
-    ></script>
+                
+                
     <script src="src/index.js"></script>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <a href="https://github.com/pedgerton/My-Weather-App"
+      target="blank">
+        Open-source code </a> by Pamela Edgerton
+        
+    </footer>
   </body>
 </html>
+
+
