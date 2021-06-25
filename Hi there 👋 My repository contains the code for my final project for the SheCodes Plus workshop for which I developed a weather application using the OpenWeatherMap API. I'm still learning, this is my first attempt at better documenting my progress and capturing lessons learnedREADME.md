@@ -1,1 +1,0 @@
-# Vanilla-Weather-App
