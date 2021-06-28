@@ -4,19 +4,12 @@
    font-family: Arial, Helvetica, sans-serif;
    color: rgb(62, 91, 136);
    background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-   
+     
        
   }
   
-  
-  .extendedforecast {
-    background: white;
-    text-align: center;
-  
-    line-height: 40px;
+      
     
-  }
-  
   .temp {
     font-size: 30px;
   }
@@ -24,19 +17,6 @@
     font-size: large;
   }
   
-
-   
- 
-  
- 
-  padding: 50px;
-  margin: 5px auto;
-  border: 4px;
-  border-radius: 8px;
- 
-
-  text-decoration: white;
-
     
       
   }
@@ -147,7 +127,7 @@
 color: white;
 border-color: darkgray;
 box-sizing: border-box;
-width: 420px;
+width: 400px;
 border-radius: 8px;
 font-size: large;
 background: white);
@@ -155,14 +135,12 @@ background: white);
 
 }
 
-::-webkit-input-placeholder{
-color:linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-}
+
 
 
 .btn {
-border-radius: 6px;
-color: white;
+
+
 background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   
   
