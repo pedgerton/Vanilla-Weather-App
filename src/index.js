@@ -162,3 +162,12 @@ form.addEventListener("submit", handleSubmit);
 
 search("Johns Creek");
 
+
+
+
+
+
+
+
+
+
