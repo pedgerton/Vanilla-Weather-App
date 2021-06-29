@@ -90,6 +90,15 @@ function handleSubmit(event) {
   
 }
 
+
+
+
+
+
+
+
+
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -159,6 +168,7 @@ celsiusTemperature.addEventListener ("click", displayCelsiusTemperature);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+ 
 
 
 

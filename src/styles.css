@@ -85,6 +85,7 @@
  footer{
 
   text-align: center;
+  color: white;
   
   
 }
@@ -103,6 +104,7 @@
 #current-temp {
   font-size: 60px;
   text-decoration: white;
+  margin-right: 30px;
 }
 
 .unitStyle {
@@ -112,9 +114,11 @@
 }
 
 .active {
-  color: white;
+  color: darkblue;
   text-decoration: none;
   cursor: default;
+  margin-left: 3px;
+  margin-left: 9px;
 }
 .row{
   color: white;
