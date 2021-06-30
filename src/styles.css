@@ -50,13 +50,13 @@
   }
   .forecast-card {
     margin-top: 130px;
-    margin-bottom: 300px;
+    
     margin-right: 200px;
     margin-left: 200px;
     border-radius: 6px;
     border: 30px solid #dadde1;
     
-    height: 650px;
+   
     
     
   
@@ -86,8 +86,11 @@
 
   text-align: center;
   color: white;
+  display: block;
+  margin-top: auto 0;
   
   
+ 
 }
 
 
@@ -118,7 +121,7 @@
   text-decoration: none;
   cursor: default;
   margin-left: 3px;
-  margin-left: 9px;
+  margin-left: 20px;
 }
 .row{
   color: white;
